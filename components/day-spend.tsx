@@ -32,7 +32,7 @@ const arrowVariants = {
 
 const DaySpend = (props: SVGProps<SVGSVGElement>) => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { margin: "", once: false});
+    const isInView = useInView(ref, { margin: "", once: true});
 	return <svg
         ref={ref}
 		viewBox='0 0 394 277'

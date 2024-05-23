@@ -42,7 +42,7 @@ export default function Dexterity() {
 						<Reveal direction='down'>
 							<p>
 								I excel in translating designs from Figma into responsive
-								websites tailored for clients' needs. Leveraging my expertise in
+								websites tailored for clients needs. Leveraging my expertise in
 								React.js, and modern CSS frameworks like Tailwind CSS.
 							</p>
 						</Reveal>
