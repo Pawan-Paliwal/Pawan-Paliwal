@@ -27,12 +27,12 @@ export default function About() {
 							Javascript.
 						</p>
 					</Reveal>
-                    <Reveal direction="down">
-						<p className="mt-2">
+					<Reveal direction='down'>
+						<p className='mt-2'>
 							I have spent a good amount of time learning how operating systems
 							work, which sparked an interest in learning Linux.
 						</p>
-                    </Reveal>
+					</Reveal>
 					<Reveal direction='down'>
 						<p className='mt-2'>
 							I don&apos;t like to work with a black box, which has led me to
@@ -41,7 +41,15 @@ export default function About() {
 							USE VIM; trust me, you should too.
 						</p>
 					</Reveal>
-					<Button className='mt-8'>Download résumé</Button>
+					<Button className='mt-8'>
+						<a
+							className='resume-button'
+							href='/tejas_sharma_resume.pdf'
+							target='_blank'
+							rel='noopener noreferrer'>
+							Download résumé
+						</a>
+					</Button>
 				</div>
 
 				<div className='relative flex justify-end lg:mt-16 lg:justify-center'>

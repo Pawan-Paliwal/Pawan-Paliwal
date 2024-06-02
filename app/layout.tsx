@@ -2,6 +2,7 @@ import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import { Toaster } from 'sonner';
 import '../styles/global.css';
+import "../styles/sooner.css";
 
 // Main heading font
 const fontMain = localFont({
@@ -34,8 +35,8 @@ export default function RootLayout({
 					className='font-inter flex justify-end' 
 					position='bottom-right'
                     theme='dark'
-                    duration={900}
-					toastOptions={{ className: 'bg-secondary-700 text-secondary-50 text-[15px] !w-auto border-none rounded-lg !h-10'  }}
+                    duration={1000}
+					toastOptions={{ className: 'bg-secondary-700 text-secondary-50 !sm:w-96 text-[15px] border-none rounded-lg !h-10 '  }}
 				/>
 				{children}
 			</body>

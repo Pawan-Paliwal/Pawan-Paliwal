@@ -35,7 +35,6 @@ export default function SkillCard({
 					alt='design'
 					width={100}
 					height={100}
-					className=''
 				/>
 			</div>
 			<h2 className='mb-8 font-main text-4xl text-secondary-700  lg:text-3xl'>

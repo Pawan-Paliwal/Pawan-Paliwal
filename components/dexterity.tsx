@@ -262,15 +262,15 @@ export default function Dexterity() {
 							animateUpBy={(isInView && isDesktop) ? -30: 0}
 						/>
 						<SkillCard
-							imageSrc='/images/design.svg'
-							heading='Designing'
-							desc='Designing interfaces that are intuitive, efficient, and enjoyable to use.'
+							imageSrc='/images/code.svg'
+							heading='Development'
+							desc='Building responsive and interactive web applications using NextJs, Tailwindcss.'
 							animateUpBy={(isInView && isDesktop) ? -100: 0}
 						/>
 						<SkillCard
-							imageSrc='/images/design.svg'
-							heading='Designing'
-							desc='Designing interfaces that are intuitive, efficient, and enjoyable to use.'
+							imageSrc='/images/landing-dev.svg'
+							heading='Landing Page'
+							desc='Crafting compelling landing pages that captivate users and drive conversions.'
 							animateUpBy={(isInView && isDesktop) ? -60: 0}
 						/>
 

@@ -16,7 +16,7 @@ export default function Connection() {
 			/>
 			<div className='flex justify-center'>
 				<div className='relative'>
-					<h1 className="font-main text-7xl leading-[90px] text-secondary-700 text-center lg:text-[65px] sm:text-5xl">
+					<h1 className="font-main text-7xl leading-[90px] text-secondary-700 text-center lg:text-[65px] lg:leading-tight sm:text-6xl sm:leading-[1.2]">
 						<Reveal direction='down'>
 							<span className='block'>
 								Thanks for stopping by!
@@ -34,7 +34,7 @@ export default function Connection() {
 						alt='thankyou'
 						width={50}
 						height={50}
-						className='absolute -right-[50px] -top-[30px]'
+						className='absolute right-0 -top-[15%]'
 					/>
 
 					<Reveal direction='down' className='mt-8 text-center'>
