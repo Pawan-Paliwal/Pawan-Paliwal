@@ -3,7 +3,7 @@ import * as React from 'react';
 import { SVGProps } from 'react';
 
 type SparkProps = {
-    sparkControls;
+    sparkControls: any;
 }
 
 const Spark = ({ sparkControls }: SparkProps) => (

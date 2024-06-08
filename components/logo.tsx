@@ -19,8 +19,8 @@ const braceVariant = {
 };
 
 type LogoProps = {
-	logoControls;
-	logoTextControls;
+	logoControls: any;
+	logoTextControls: any;
 };
 
 export default function Logo({ logoControls, logoTextControls }: LogoProps) {
