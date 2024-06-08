@@ -1,18 +1,20 @@
 import { motion } from 'framer-motion';
 import * as React from 'react';
 import { SVGProps } from 'react';
-const Spark = (props: SVGProps<SVGSVGElement>) => (
+
+type SparkProps = {
+    sparkControls;
+}
+
+const Spark = ({ sparkControls }: SparkProps) => (
 	<svg
 		viewBox='0 0 111 111'
 		fill='none'
 		xmlns='http://www.w3.org/2000/svg'
-		{...props}>
+		>
 		<motion.g
 			initial={{ opacity: 0, scale: 0 }}
-			animate={{ opacity: 1, scale: 1 }}
-			transition={{
-				delay: 3.8,
-			}}
+			animate={sparkControls}
 			id='spark'
 			clipPath='url(#clip0_550_1543)'>
 			<path

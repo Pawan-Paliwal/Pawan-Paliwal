@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Logo from './logo';
 import Divider from './divider';
+import { cn } from '@/lib/utils';
 
 export default function Footer() {
 	return (
@@ -15,15 +16,19 @@ export default function Footer() {
 				<Divider />
 			</div>
 			<p className='pb-8 text-center font-inter text-sm text-secondary-400'>
-				© Copyright – Tejas Sharma
+				Code and Design – Me
 			</p>
 		</footer>
 	);
 }
 
-export function SocialIcons() {
+type SocialIconsTypes = {
+	className?: string;
+};
+
+export function SocialIcons({ className }: SocialIconsTypes) {
 	return (
-		<div className='flex space-x-4'>
+		<div className={cn('flex space-x-4', className)}>
 			<Image src='/images/insta.svg' alt='insta' width={20} height={20} />
 			<Image src='/images/twitter.svg' alt='Twitter' width={20} height={20} />
 			<Image src='/images/whatsapp.svg' alt='WhatsApp' width={20} height={20} />

@@ -10,12 +10,12 @@ import { AnimatePresence, motion, useInView } from 'framer-motion';
 import Reveal from './reveal';
 import Button from './button';
 import SkillCard from './skill-card';
-import useIsDesktop from '@/hooks/useInDesktop';
+import useDeviceDetection from '@/hooks/useDeviceDetection';
 
 const tabTitles = ['Languages', 'Web Technologies', 'Frameworks'];
 
 export default function Dexterity() {
-    const isDesktop  = useIsDesktop();
+	const { isDesktopOrLaptop: isDesktop} = useDeviceDetection();
 
 	const [currentTab, setCurrentTab] = useState(1);
 	const ref = useRef(null);
@@ -259,21 +259,20 @@ export default function Dexterity() {
 							imageSrc='/images/design.svg'
 							heading='Designing'
 							desc='Designing interfaces that are intuitive, efficient, and enjoyable to use.'
-							animateUpBy={(isInView && isDesktop) ? -30: 0}
+							animateUpBy={isInView && isDesktop ? -30 : 0}
 						/>
 						<SkillCard
 							imageSrc='/images/code.svg'
 							heading='Development'
 							desc='Building responsive and interactive web applications using NextJs, Tailwindcss.'
-							animateUpBy={(isInView && isDesktop) ? -100: 0}
+							animateUpBy={isInView && isDesktop ? -100 : 0}
 						/>
 						<SkillCard
 							imageSrc='/images/landing-dev.svg'
 							heading='Landing Page'
 							desc='Crafting compelling landing pages that captivate users and drive conversions.'
-							animateUpBy={(isInView && isDesktop) ? -60: 0}
+							animateUpBy={isInView && isDesktop ? -60 : 0}
 						/>
-
 					</motion.div>
 				</div>
 			</Section>
@@ -282,10 +281,10 @@ export default function Dexterity() {
 					Next up <span className='text-primary-500'>projects</span>
 				</SectionLink>
 			</div>
-			<img
-				src='/images/dexterity-wave.svg'
-				className='absolute -z-10 w-full -translate-y-80'
-			/>
+			{/* <img */}
+			{/* 	src='/images/dexterity-wave.svg' */}
+			{/* 	className='absolute -z-10 w-full -translate-y-80' */}
+			{/* /> */}
 		</>
 	);
 }

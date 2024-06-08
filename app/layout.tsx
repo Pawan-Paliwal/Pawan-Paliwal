@@ -2,7 +2,7 @@ import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import { Toaster } from 'sonner';
 import '../styles/global.css';
-import "../styles/sooner.css";
+import '../styles/sooner.css';
 
 // Main heading font
 const fontMain = localFont({
@@ -30,13 +30,21 @@ export default function RootLayout({
 	return (
 		<html lang='en' className={`${fontMain.variable} ${inter.variable}`}>
 			<body>
-                {/* :where([data-sonner-toast]) :where([data-title]) */}
 				<Toaster
-					className='font-inter flex justify-end' 
 					position='bottom-right'
-                    theme='dark'
-                    duration={1000}
-					toastOptions={{ className: 'bg-secondary-700 text-secondary-50 !sm:w-96 text-[15px] border-none rounded-lg !h-10 '  }}
+					theme='dark'
+					duration={1000}
+					toastOptions={{
+						unstyled: true,
+						classNames: {
+							toast: 'bg-secondary-500 w-auto p-3 rounded-lg right-0',
+							title: 'text-white font-inter font-normal text-[16px]',
+							description: 'text-red-400',
+							actionButton: 'bg-zinc-400',
+							cancelButton: 'bg-orange-400',
+							closeButton: 'bg-lime-400',
+						},
+					}}
 				/>
 				{children}
 			</body>

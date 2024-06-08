@@ -6,7 +6,11 @@ import { Link } from 'react-scroll';
 import { toast } from 'sonner';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { emailAddress } from '@/constants';
-import { motion } from 'framer-motion';
+import { Variants, motion, useAnimationControls } from 'framer-motion';
+import { PreloaderContext, PreloaderContextProps } from '@/context/preloader';
+import { useContext, useEffect } from 'react';
+import { cn } from '@/lib/utils';
+import useDeviceDetection from '@/hooks/useDeviceDetection';
 
 const navbarBarLinks = [
 	{
@@ -27,49 +31,87 @@ const navbarBarLinks = [
 	},
 ];
 
-const navLinkContainerVariants = {
-	hidden: {
-		opacity: 0,
-	},
+const navLinksVariants: Variants = {
+	hidden: { opacity: 0, y: -10 },
 	visible: {
 		opacity: 1,
+		y: 0.3,
 		transition: {
-			delayChildren: 2.6, 
+			duration: 0.4,
 			staggerChildren: 0.1,
 		},
 	},
 };
 
-const navLinksVariants = {
-    hidden: {opacity: 0, y: -10},
-    visible: {
-        opacity: 1,
-        y: 0.3,
-        transition: {
-            duration: 0.5,
-            ease: [0.22, 1, 0.36, 1]
-        }
-    }
-}
-
-
 export default function Navbar() {
+    const { isLaptop, isMobile } = useDeviceDetection();
+	const { isLoaded, navAnimComplete, toggleMenu, showMenu } = useContext(
+		PreloaderContext,
+	) as PreloaderContextProps;
+
+	const controls = useAnimationControls();
+	const btnControls = useAnimationControls();
+	const logoControls = useAnimationControls();
+	const logoTextControls = useAnimationControls();
+
+	useEffect(() => {
+		const sequenceAnimation = async () => {
+            if (!isMobile) {
+                await logoControls.start('show');
+            }
+			await logoTextControls.start({
+				scale: 1,
+				opacity: 1,
+				transition: {
+					duration: 0.4,
+					ease: [0.22, 1, 0.36, 1],
+				},
+			});
+            if (!isLaptop) {
+                await controls.start('visible');
+            }
+			await btnControls.start({ opacity: 1, y: 0 });
+			navAnimComplete();
+		};
+
+		if (isLoaded) {
+			sequenceAnimation();
+		}
+	}, [isLoaded]);
+
 	return (
 		<div className='absolute w-full'>
 			<nav className='container mt-4 flex items-center justify-between font-inter text-[16px] sm:p-4'>
 				{/* links */}
-				<div className='hidden w-1/3 lg:block'>
-					<span>Menu</span>
+				<div
+					className='relative z-[60] hidden w-1/3 cursor-pointer transition-colors lg:block'
+					onClick={toggleMenu}>
+					<button className='group relative'>
+						<motion.span
+							initial={{}}
+							animate={showMenu ? { opacity: 0, translateY: '-100%' } : ''}
+							className={cn('relative inline-block')}>
+							Menu
+						</motion.span>
+						<motion.span
+							initial={{ opacity: 0, translateY: '100%' }}
+							animate={showMenu ? { opacity: 1, translateY: 0 } : ''}
+							className={cn('opacity-1 absolute left-0 top-0 transition-colors', {
+								'text-primary-500': showMenu,
+							})}>
+							Close
+						</motion.span>
+					</button>
 				</div>
 				<motion.ul
-					variants={navLinkContainerVariants}
+					variants={navLinksVariants}
 					initial='hidden'
-					animate='visible'
+					animate={controls}
 					className='flex w-1/3 gap-x-8 lg:hidden sm:w-1/2'>
 					{navbarBarLinks.map((link, idx) => {
 						return (
 							<motion.li
-                                variants={navLinksVariants}
+								variants={navLinksVariants}
 								key={idx}
 								className='relative cursor-pointer rounded-lg text-secondary-700 before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-full before:translate-y-2 before:bg-secondary-700 before:opacity-0 before:transition-all before:duration-200 hover:before:translate-y-1 hover:before:opacity-100'>
 								<Link to={link.href} smooth={true} duration={800}>
@@ -83,17 +125,17 @@ export default function Navbar() {
 				{/* logo */}
 				<div className='flex w-1/3 justify-center sm:hidden'>
 					<div className='w-44'>
-						<Logo />
+						<Logo
+							logoControls={logoControls}
+							logoTextControls={logoTextControls}
+						/>
 					</div>
 				</div>
 
 				{/* contact button */}
 				<motion.div
-                    initial={{ opacity: 0, y: -10}}
-                    animate={{ opacity: 1, y: 0}}
-                    transition={{
-                        delay: 3 
-                    }}
+					initial={{ opacity: 0, y: -10 }}
+					animate={btnControls}
 					className='w-1/3 text-right sm:w-1/2'>
 					<CopyToClipboard
 						text={emailAddress}

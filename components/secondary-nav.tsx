@@ -1,16 +1,14 @@
 'use client';
-
 import {
 	useScroll,
 	useAnimationControls,
 	motion,
 	AnimatePresence,
 } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useContext } from 'react';
 import { cn } from '@/lib/utils';
-import Logo from './logo';
-import { SocialIcons } from './footer';
 import { Link } from 'react-scroll';
+import { PreloaderContext, PreloaderContextProps } from '@/context/preloader';
 
 const navLinks = [
 	{
@@ -65,12 +63,10 @@ const linkVariants = {
 };
 export default function SecondaryNav() {
 	const { scrollYProgress } = useScroll();
-	const [showMenu, setShowMenu] = useState(false);
+	const { showMenu, toggleMenu, setMenuVisibility } = useContext(
+		PreloaderContext,
+	) as PreloaderContextProps;
 	const controls = useAnimationControls();
-
-	function handleClick() {
-		setShowMenu((pre) => !pre);
-	}
 
 	useEffect(() => {
 		return scrollYProgress.on('change', (latestValue) => {
@@ -79,7 +75,7 @@ export default function SecondaryNav() {
 			} else {
 				if (!showMenu) {
 					controls.start('hide');
-					setShowMenu(false);
+					setMenuVisibility(false);
 				}
 			}
 		});
@@ -97,7 +93,7 @@ export default function SecondaryNav() {
 				initial='hide'
 				variants={ScrollToTopContainerVariants}
 				animate={controls}
-				onClick={handleClick}>
+				onClick={toggleMenu}>
 				<span
 					className={cn(
 						'block h-[1px] w-4 -translate-y-[3px] bg-white transition-all duration-300 group-hover:bg-secondary-50',
@@ -105,7 +101,6 @@ export default function SecondaryNav() {
 							'translate-y-0 rotate-45 bg-secondary-50': showMenu,
 						},
 					)}></span>
-				{/* <span className='my-[2px]' /> */}
 				<span
 					className={cn(
 						'block h-[1px] w-4 translate-y-[3px] bg-white transition-all  duration-300 group-hover:bg-secondary-50',
@@ -126,8 +121,9 @@ export default function SecondaryNav() {
 							duration: 0.5,
 							ease: [0.85, 0, 0.15, 1],
 						}}
-						onClick={handleClick}
-						className='fixed left-0 top-0 z-40 h-screen w-screen bg-secondary-50/80'></motion.div>
+						onClick={toggleMenu}
+						className='fixed left-0 top-0 z-40 h-screen w-screen bg-secondary-50/80'
+					/>
 				)}
 				{showMenu && (
 					<motion.div
@@ -139,21 +135,21 @@ export default function SecondaryNav() {
 							ease: [0.85, 0, 0.15, 1],
 						}}
 						exit={{ opacity: 0, x: '-100%' }}
-						className='fixed left-0 top-0 z-50 h-full -translate-x-full border-r-2 border-secondary-80 bg-white px-20 pb-0 pt-32'>
+						className='fixed left-0 top-0 z-50 h-full -translate-x-full border-r-2 border-secondary-80 bg-white px-20 pb-0 pt-32 tiny:w-full'>
 						<motion.ul
 							variants={linkVariants}
 							initial='down'
 							animate='up'
-							className='flex flex-col space-y-8'>
+							className='flex flex-col space-y-8 items-center'>
 							{navLinks.map((link, idx) => {
 								return (
 									<motion.li
 										variants={linkVariants}
 										key={idx}
-										className='cursor-pointer rounded-lg text-center font-main text-4xl text-secondary-800'>
+										className='cursor-pointer rounded-lg text-center font-main text-4xl text-secondary-800 tiny:text-5xl'>
 										<Link
 											className='relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-full before:translate-y-2 before:bg-secondary-500 before:opacity-0 before:transition-all before:duration-200 hover:before:translate-y-1 hover:before:opacity-100'
-											onClick={handleClick}
+											onClick={toggleMenu}
 											to={link.href}
 											duration={800}
 											smooth={true}>
@@ -163,11 +159,6 @@ export default function SecondaryNav() {
 								);
 							})}
 						</motion.ul>
-						<div className='absolute bottom-4'>
-							<div className='mt-8 flex justify-center'>
-								<SocialIcons />
-							</div>
-						</div>
 					</motion.div>
 				)}
 			</AnimatePresence>
