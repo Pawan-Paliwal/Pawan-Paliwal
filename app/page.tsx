@@ -32,7 +32,7 @@ export default function Home() {
 						<Connection />
 						<Footer />
 						<ScrollToTopButton />
-						<RemoveScrollBar />
+						{/* <RemoveScrollBar /> */}
 					</main>
 				</SmoothScroll>
 			</Preloader>
