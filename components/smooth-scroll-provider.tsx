@@ -1,8 +1,9 @@
 'use client';
 
-import ReactLenis from 'lenis/react';
+import ReactLenis, { LenisContext } from 'lenis/react';
 import { ReactNode, useContext, useEffect, useRef } from 'react';
 import { PreloaderContext, PreloaderContextProps } from '@/context/preloader';
+import Lenis from 'lenis';
 
 type SmoothScrollTypes = {
 	children: ReactNode;
@@ -14,12 +15,13 @@ export default function SmoothScroll({ children }: SmoothScrollTypes) {
 
 	useEffect(() => {
 		if (lenisRef.current) {
-            const lenis = lenisRef?.current as any;
-            if (showMenu) {
-                lenis.stop();
-            } else {
-                lenis.start();
-            }
+			const { lenis }: { lenis: Lenis } = lenisRef?.current;
+			if (!lenis) return;
+			if (showMenu) {
+				lenis.stop();
+			} else {
+				lenis.start();
+			}
 		}
 	}, [showMenu]);
 
