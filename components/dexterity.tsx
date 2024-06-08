@@ -281,10 +281,10 @@ export default function Dexterity() {
 					Next up <span className='text-primary-500'>projects</span>
 				</SectionLink>
 			</div>
-			{/* <img */}
-			{/* 	src='/images/dexterity-wave.svg' */}
-			{/* 	className='absolute -z-10 w-full -translate-y-80' */}
-			{/* /> */}
+			<img
+				src='/images/dexterity-wave.svg'
+				className='absolute -z-10 w-full -translate-y-80 lg:hidden'
+			/>
 		</>
 	);
 }

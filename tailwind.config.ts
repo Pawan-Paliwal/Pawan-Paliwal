@@ -66,6 +66,22 @@ const config: Config = {
 				main: ['var(--font-main)'],
 				inter: ['var(--font-inter)'],
 			},
+			keyframes: {
+				float: {
+					'0%': {
+						transform: 'translateY(0)',
+					},
+					'50%': {
+						transform: 'translateY(10px)',
+					},
+					'100%': {
+						transform: 'translateY(0)',
+					},
+				},
+			},
+			animation: {
+				float: 'float 3s infinite',
+			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic':

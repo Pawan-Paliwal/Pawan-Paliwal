@@ -23,7 +23,7 @@ export default function Projects() {
 			</div>
 
 			<div className='grid gap-y-10'>
-				<div className='grid grid-cols-2 items-center pt-20 lg:grid-cols-1'>
+				<div className='grid grid-cols-2 items-center lg:grid-cols-1'>
 					<div>
 						<Panaroma text='latest work' />
 						<Reveal direction='down'>
