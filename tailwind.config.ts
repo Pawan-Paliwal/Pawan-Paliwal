@@ -89,6 +89,6 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('tailwindcss-no-scrollbar')],
 };
 export default config;

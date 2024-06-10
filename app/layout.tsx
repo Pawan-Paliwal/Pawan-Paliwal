@@ -28,8 +28,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en' className={`${fontMain.variable} ${inter.variable}`}>
-			<body>
+		<html
+			lang='en'
+			className={`${fontMain.variable} ${inter.variable} scrollbar-none`}>
+			<body className=''>
 				<Toaster
 					position='bottom-right'
 					theme='dark'

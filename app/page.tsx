@@ -1,6 +1,5 @@
 'use client';
 
-import { RemoveScrollBar } from 'react-remove-scroll-bar';
 import Navbar from '@/components/navbar';
 import Hero from '@/components/hero';
 import About from '@/components/about';
@@ -32,7 +31,6 @@ export default function Home() {
 						<Connection />
 						<Footer />
 						<ScrollToTopButton />
-						<RemoveScrollBar/>
 					</main>
 				</SmoothScroll>
 			</Preloader>
