@@ -83,14 +83,14 @@ export default function Projects() {
 								width={350}
 								height={350}
 								quality={100}
-								className='-translate-x-[30px] -translate-y-[25px] transition-transform duration-300 hover:-translate-x-[35px]  hover:-translate-y-[30px]'
+								className=''
 							/>
 							<Image
 								src='/images/frame-dotted.png'
 								alt='frame-dotted'
 								width={150}
 								height={150}
-								className='absolute bottom-0 right-0'
+								className='absolute bottom-0 right-0 translate-x-[30px] translate-y-[25px] transition-transform duration-300 sm:hidden'
 							/>
 						</div>
 					</div>
@@ -153,14 +153,14 @@ export default function Projects() {
 								width={350}
 								height={350}
 								quality={100}
-								className='-translate-y-[25px] translate-x-[30px] transition-transform duration-300 hover:-translate-y-[30px]  hover:translate-x-[35px]'
+								className=''
 							/>
 							<Image
 								src='/images/frame-dotted.png'
 								alt='frame-dotted'
 								width={150}
 								height={150}
-								className='absolute -bottom-0 left-0 -scale-x-100'
+								className='absolute -bottom-0 left-0 -scale-x-100 translate-y-[25px] -translate-x-[30px] transition-transform duration-300 sm:hidden'
 							/>
 						</div>
 					</div>
@@ -220,14 +220,14 @@ export default function Projects() {
 								width={350}
 								height={350}
 								quality={100}
-								className='-translate-x-[30px] -translate-y-[25px] transition-transform duration-300 hover:-translate-x-[35px]  hover:-translate-y-[30px]'
+								className=''
 							/>
 							<Image
 								src='/images/frame-dotted.png'
 								alt='frame-dotted'
 								width={150}
 								height={150}
-								className='absolute bottom-0 right-0'
+								className='absolute bottom-0 right-0 translate-x-[30px] translate-y-[25px] transition-transform duration-300 sm:hidden'
 							/>
 						</div>
 					</div>
