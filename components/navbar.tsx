@@ -141,18 +141,29 @@ export default function Navbar() {
         </div>
 
         {/* contact button */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={btnControls}
-          className="w-1/3 text-right sm:w-1/2"
-        >
-          <CopyToClipboard
-            text={emailAddress}
-            onCopy={() => toast("Email copied")}
-          >
-            <Button variant="secondary">Get in touch</Button>
-          </CopyToClipboard>
-        </motion.div>
+        <div className="w-1/3 text-right sm:w-1/2">
+          <motion.div 
+            className="gap-4 flex justify-end"
+            initial={{ opacity: 0, y: -10 }} animate={btnControls}>
+            <CopyToClipboard
+              text={emailAddress}
+              onCopy={() => toast("Email copied")}
+            >
+              <Button variant="secondary">Get in touch</Button>
+            </CopyToClipboard>
+
+            <Button className="lg:hidden">
+              <a
+                className="resume-button"
+                href="/tejas_sharma_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download résumé
+              </a>
+            </Button>
+          </motion.div>
+        </div>
       </nav>
     </div>
   );

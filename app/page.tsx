@@ -13,6 +13,7 @@ import PreLoader from "@/components/pre-loader";
 import SecondaryNav from "@/components/secondary-nav";
 import SmoothScroll from "@/components/smooth-scroll-provider";
 import Preloader from "@/context/preloader";
+import StickyButton from "@/components/sticky-button";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
             <Footer />
             <ScrollToTopButton />
           </main>
+          <StickyButton />
         </SmoothScroll>
       </Preloader>
     </>

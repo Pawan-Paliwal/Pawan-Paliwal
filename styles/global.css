@@ -5,6 +5,6 @@
 
 @layer base {
 	body {
-		@apply !mr-0; 
+		@apply !mr-0 overflow-x-hidden; 
 	}
 }
