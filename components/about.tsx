@@ -22,30 +22,24 @@ export default function About() {
 						<Panaroma text='myself' />
 						<Reveal direction='down'>
 							<p>
-								Getting straight to the point, my skills include ReactJs,
-								NodeJs, C++, C, and Javascript. I have a solid understanding of
-								the core of the world of web development, which includes HTML,
-								CSS, and Javascript.
+								I like to get straight to the point—my expertise lies in React.js, Node.js, and JavaScript. I have a strong grasp of the fundamentals of web development, including HTML and CSS, which form the backbone of everything I build.
+								My curiosity about how systems function under the hood led me to explore operating systems in depth, eventually sparking a deep interest in Linux.
 							</p>
 						</Reveal>
 						<Reveal direction='down'>
 							<p className='mt-2'>
-								I have spent a good amount of time learning how operating
-								systems work, which sparked an interest in learning Linux.
+								I’m not someone who’s satisfied working with a black box—I believe in understanding the "why" behind the "what." That mindset drives me to continuously deepen my knowledge of the technologies I work with.
 							</p>
 						</Reveal>
 						<Reveal direction='down'>
 							<p className='mt-2'>
-								I don&apos;t like to work with a black box, which has led me to
-								learn the ins and outs of the web technologies mentioned above,
-								and I plan to continue doing so. And the most important thing: I
-								USE VIM; trust me, you should too.
+								And one last thing—yes, I use Vim. You should too. It’ll change the way you code.
 							</p>
 						</Reveal>
 						<Button className='mt-8'>
 							<a
 								className='resume-button'
-								href='/tejas_sharma_resume.pdf'
+								href='/pawan-paliwal-resume.pdf'
 								target='_blank'
 								rel='noopener noreferrer'>
 								Download résumé

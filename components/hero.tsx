@@ -63,7 +63,7 @@ export default function Hero() {
 								Hello,
 							</motion.span>
 							<motion.span variants={heroElementVariants} className='block'>
-								I&apos;m Tejas,
+								I&apos;m Pawan,
 							</motion.span>
 							<motion.span
 								variants={heroElementVariants}
@@ -75,10 +75,7 @@ export default function Hero() {
 
 					<div className='lg:max-w-auto mt-4 max-w-[620px] font-inter text-[16px] text-secondary-500'>
 						<motion.p variants={heroElementVariants}>
-							Currently working with Next.js and learning backend development
-							and databases. I can create any website to suit your personal
-							taste. Please click below to learn more about me and check out my
-							projects.
+							Passionate about building beautiful and functional web experiences, I’m currently working with Next.js while exploring backend development and databases. My goal is to craft websites that not only look great but also reflect your unique style. Click below to learn more about me and explore my projects.
 						</motion.p>
 					</div>
 

@@ -155,7 +155,7 @@ export default function Navbar() {
             <Button className="lg:hidden">
               <a
                 className="resume-button"
-                href="/tejas_sharma_resume.pdf"
+                href="/pawan-paliwal-resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >

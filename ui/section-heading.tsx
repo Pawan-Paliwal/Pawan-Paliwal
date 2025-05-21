@@ -12,7 +12,7 @@ export default function SectionHeading({
 	text,
 }: SectionHeadingProps) {
 	return (
-		<div className={cn('mb-20 flex justify-end font-main sm:mb-14', className)}>
+		<div className={cn('mb-14 flex justify-end font-main sm:mb-14', className)}>
 			<h1 className='flex items-center text-6xl text-secondary-700'>
 				<span className='mr-2 self-end text-primary-500'>.</span>
 				{text}

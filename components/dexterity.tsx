@@ -32,18 +32,14 @@ export default function Dexterity() {
 						<Panaroma text='Development' />
 						<Reveal direction='down'>
 							<p>
-								I create stunning and effective websites for contemporary
-								businesses. A modern business needs a website that builds
-								customer trust and supports your operations. I ensure your
-								website meets those high standards.
+							I craft visually striking and high-performing websites tailored for modern businesses. In today’s digital landscape, a website should not only captivate but also build trust and seamlessly support your operations. I make sure your online presence reflects that standard—elegant, reliable, and purpose-driven.
 							</p>
 						</Reveal>
 						<Panaroma text='Design' className='mt-10' />
 						<Reveal direction='down'>
 							<p>
-								I excel in translating designs from Figma into responsive
-								websites tailored for clients needs. Leveraging my expertise in
-								React.js, and modern CSS frameworks like Tailwind CSS.
+							I specialize in building responsive websites tailored to clients' unique needs. With a strong command of React.js and modern CSS frameworks like Tailwind CSS, I transform ideas into seamless, user-friendly web experiences.
+							Every project I take on is crafted with performance, scalability, and clean code in mind.
 							</p>
 						</Reveal>
 					</div>
@@ -258,19 +254,19 @@ export default function Dexterity() {
 						<SkillCard
 							imageSrc='/images/design.svg'
 							heading='Designing'
-							desc='Designing interfaces that are intuitive, efficient, and enjoyable to use.'
+							desc='Creating user interfaces that are clean, purposeful, and a pleasure to navigate.'
 							animateUpBy={isInView && isDesktop ? -30 : 0}
 						/>
 						<SkillCard
 							imageSrc='/images/code.svg'
 							heading='Development'
-							desc='Building responsive and interactive web applications using NextJs, Tailwindcss.'
+							desc='Building fast, responsive web apps with Next.js and Tailwind CSS.'
 							animateUpBy={isInView && isDesktop ? -100 : 0}
 						/>
 						<SkillCard
 							imageSrc='/images/landing-dev.svg'
 							heading='Landing Page'
-							desc='Crafting compelling landing pages that captivate users and drive conversions.'
+							desc='Creating landing pages that engage users and boost conversions.'
 							animateUpBy={isInView && isDesktop ? -60 : 0}
 						/>
 					</motion.div>

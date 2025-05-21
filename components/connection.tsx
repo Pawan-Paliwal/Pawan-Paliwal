@@ -44,7 +44,7 @@ export default function Connection() {
               <Button variant="ghost">
                 <a
                   className="resume-button"
-                  href="/tejas_sharma_resume.pdf"
+                  href="/pawan-paliwal-resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

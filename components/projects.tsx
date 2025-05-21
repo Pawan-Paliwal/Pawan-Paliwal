@@ -28,48 +28,36 @@ export default function Projects() {
 						<Panaroma text='latest work' />
 						<Reveal direction='down'>
 							<h2 className='font-main text-5xl text-secondary-700'>
-								Cosmetologist Portfolio
+								Smart Exchange
 							</h2>
 						</Reveal>
 						<div className='mt-4 flex flex-wrap gap-x-3 gap-y-3 font-inter'>
 							<span className='inline-block rounded-[5px] bg-secondary-400 px-5 py-1 text-sm font-bold text-secondary-50'>
-								Gatsby
+								Next.js
 							</span>
 							<span className='inline-block rounded-[5px] bg-secondary-400 px-5 py-1 text-sm font-bold text-secondary-50'>
 								TailwindCSS
 							</span>
 							<span className='inline-block rounded-[5px] bg-secondary-400 px-5 py-1 text-sm font-bold text-secondary-50'>
-								Framer Motion
+								Web APis
 							</span>
 							<span className='inline-block rounded-[5px] bg-secondary-400 px-5 py-1 text-sm font-bold text-secondary-50'>
-								Contentful CMS
+								Firebase
 							</span>
 						</div>
 						<div className='mt-5 text-[16px] text-secondary-500'>
 							<p>
-								Efficiently fetched and rendered images using the headless
-								Contentful CMS, implemented lazy loading for large images to
-								optimize performance. 
+								Smart Exchange is a revolutionary trading platform designed to simplify and accelerate your journey in the financial world. Whether you're a beginner or an experienced trader, Smart Exchange empowers you to build a powerful and visually stunning financial portfolio—quickly and effortlessly.
 							</p>
 							<p className='mt-2'>
-								One of the key challenges I faced was optimizing the loading and
-								rendering of large images, especially on mobile devices, without
-								compromising performance. To address this, I leveraged the
-								powerful Contentful CMS.
+								With real-time insights, intuitive tools, and a user-friendly interface, managing your investments has never been easier. Best of all, you can get started today—absolutely free. Join a community of smart investors and take control of your financial future with Smart Exchange.
 							</p>
 						</div>
 
 						<div className='mt-6 flex space-x-6'>
 							<Button>
-								<a href='https://nainamakeover.vercel.app/' target='_blank'>
+								<a href='https://www.smart-exchange.in/' target='_blank'>
 									Watch live
-								</a>
-							</Button>
-							<Button variant='secondary'>
-								<a
-									href='https://github.com/tejassharma-ts/Client-Portfolio'
-									target='_blank'>
-									Get to code
 								</a>
 							</Button>
 						</div>
@@ -102,7 +90,7 @@ export default function Projects() {
 						<Panaroma text='latest work' />
 						<Reveal direction='down'>
 							<h2 className='font-main text-5xl text-secondary-700'>
-								Blogging application
+								RingMusic
 							</h2>
 						</Reveal>
 						<div className='mt-4 flex flex-wrap gap-x-3 gap-y-3 font-inter'>
@@ -110,7 +98,7 @@ export default function Projects() {
 								NextJs
 							</span>
 							<span className='inline-block rounded-[5px] bg-secondary-400 px-5 py-1 text-sm font-bold text-secondary-50'>
-								Framer motion
+								PHP Apis
 							</span>
 
 							<span className='inline-block rounded-[5px] bg-secondary-400 px-5 py-1 text-sm font-bold text-secondary-50'>
@@ -123,21 +111,17 @@ export default function Projects() {
 						</div>
 						<div className='mt-4 text-[16px] text-secondary-500'>
 							<p>
-								The website integrates a blog section, allowing users to view
-								and read blog posts. This feature adds value by providing
-								relevant content and insights to visitors.
+								We are a next-generation music streaming platform that offers a seamless, personalized listening experience. Whether you're vibing to the latest hits, diving into indie gems, or creating playlists for every mood — RingMusic is your ultimate music companion.
 							</p>
 							<p className='mt-2'>
-								Website use dynamic content sourced from JSON files or a content
-								management system (CMS). This approach allows for easier content
-								updates and management.
+								Whether you're a casual listener or a hardcore music enthusiast, RingMusic is designed to make every listening moment special.
 							</p>
 						</div>
 
 						<div className='mt-6 flex space-x-6'>
 							<Button>
 								<a
-									href='https://exampleportfoliowithblog.vercel.app'
+									href='https://ringmusic.in/'
 									target='_blank'>
 									Watch live
 								</a>
@@ -187,10 +171,7 @@ export default function Projects() {
 						</div>
 						<div className='mt-5 text-[16px] text-secondary-500'>
 							<p>
-								The project is built using Next.js, which allows for easy
-								creation of multi-page applications. You have separate pages for
-								different sections like Home, Services, Subjects, Testimonials,
-								and Contact.
+							The project is built using Next.js, a powerful React framework that facilitates the development of fast, scalable, and SEO-friendly multi-page applications. Leveraging Next.js's built-in file-based routing system, this project features clearly structured and intuitive navigation, allowing users to move seamlessly between various sections of the website.
 							</p>
 						</div>
 
@@ -200,13 +181,6 @@ export default function Projects() {
 									href='https://assignment-help-web.vercel.app'
 									target='_blank'>
 									Watch live
-								</a>
-							</Button>
-							<Button variant='secondary'>
-								<a
-									href='https://github.com/tejassharma-ts/assignment-help-web'
-									target='_blank'>
-									Get to code
 								</a>
 							</Button>
 						</div>

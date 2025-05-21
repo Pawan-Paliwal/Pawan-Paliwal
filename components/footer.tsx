@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="container pt-16 md:px-4 sm:px-2">
       <div className="flex items-center justify-between sm:flex-col">
         <div className="sm:mb-8">
-          <Image src="/images/logo.svg" alt="logo" width={176} height={45} />
+          <Image src="/images/logo.png" alt="logo" width={176} height={45} />
         </div>
         <SocialIcons />
       </div>
@@ -29,7 +29,7 @@ type SocialIconsTypes = {
 export function SocialIcons({ className }: SocialIconsTypes) {
   return (
     <div className={cn("flex space-x-4", className)}>
-      <a href="https://github.com/tejassharma-ts" target="_blank" className="hover:translate-x-1 transition-all">
+      <a href="https://github.com/Pawan-Paliwal" target="_blank" className="hover:translate-x-1 transition-all">
         <Image src="/images/github.svg" alt="GitHub" width={20} height={20} />
       </a>
     </div>
