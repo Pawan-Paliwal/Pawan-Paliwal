@@ -10,10 +10,13 @@ import { emailAddress } from "@/constants";
 export default function Connection() {
   return (
     <div id="contact" className="relative w-full pt-52 sm:pt-20">
-      <img
+      <Image
         src="/images/dexterity-wave.svg"
-        className="absolute left-0 top-0 w-full sm:hidden"
+        alt="Decorative wave"
+        fill
+        className="absolute left-0 top-0 w-full sm:hidden object-cover"
       />
+
       <div className="flex justify-center">
         <div className="relative">
           <h1 className="text-center font-main text-7xl leading-[90px] text-secondary-700 lg:text-[65px] lg:leading-tight sm:text-5xl sm:leading-[1.2]">

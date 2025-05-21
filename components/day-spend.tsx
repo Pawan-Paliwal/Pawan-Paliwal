@@ -4,15 +4,15 @@ import { SVGProps } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const activityVariants = {
-    inactive: { scale: 0.70, opacity: 0 },
+	inactive: { scale: 0.70, opacity: 0 },
 	active: {
 		opacity: 1,
-        scale: 1,
+		scale: 1,
 		transition: {
-            duration: 0.5,
-            delayChildren: 0.8,
+			duration: 0.5,
+			delayChildren: 0.8,
 			staggerChildren: 0.3,
-            ease: [0.22, 1, 0.36, 1]
+			ease: [0.22, 1, 0.36, 1]
 		},
 	},
 };
@@ -22,19 +22,19 @@ const arrowVariants = {
 	active: {
 		opacity: 1,
 		transition: {
-            duration: 1,
-            delayChildren: 0.8,
+			duration: 1,
+			delayChildren: 0.8,
 			staggerChildren: 0.37,
-            ease: [0.22, 1, 0.36, 1]
+			ease: [0.22, 1, 0.36, 1]
 		},
 	},
 };
 
 const DaySpend = (props: SVGProps<SVGSVGElement>) => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { margin: "", once: true});
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true });
 	return <svg
-        ref={ref}
+		ref={ref}
 		viewBox='0 0 394 277'
 		fill='none'
 		xmlns='http://www.w3.org/2000/svg'
@@ -42,7 +42,7 @@ const DaySpend = (props: SVGProps<SVGSVGElement>) => {
 		<motion.g
 			initial='inactive'
 			variants={activityVariants}
-			animate={isInView ? 'active': 'none'}
+			animate={isInView ? 'active' : 'none'}
 			id='day_spend'>
 			<motion.path
 				variants={activityVariants}
@@ -78,7 +78,7 @@ const DaySpend = (props: SVGProps<SVGSVGElement>) => {
 		<motion.g
 			initial='inactive'
 			variants={arrowVariants}
-			animate={isInView ? 'active': 'none'}
+			animate={isInView ? 'active' : 'none'}
 			id='arrow'>
 			<motion.g variants={arrowVariants} id='arrow_second'>
 				<path

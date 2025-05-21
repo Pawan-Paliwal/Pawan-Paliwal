@@ -10,7 +10,7 @@ type RevealProps = {
 };
 export default function Reveal({ className, children, direction = 'left' }: RevealProps) {
 	const ref = useRef(null);
-	const isInView = useInView(ref, { margin: '', once: true});
+	const isInView = useInView(ref, { once: true});
 	let sideInFrom;
 	switch (direction) {
 		case 'left':

@@ -28,8 +28,9 @@ export default function About() {
 						</Reveal>
 						<Reveal direction='down'>
 							<p className='mt-2'>
-								I’m not someone who’s satisfied working with a black box—I believe in understanding the "why" behind the "what." That mindset drives me to continuously deepen my knowledge of the technologies I work with.
+								I’m not someone who’s satisfied working with a black box—I believe in understanding the &quot;why&quot; behind the &quot;what.&quot; That mindset drives me to continuously deepen my knowledge of the technologies I work with.
 							</p>
+
 						</Reveal>
 						<Reveal direction='down'>
 							<p className='mt-2'>
